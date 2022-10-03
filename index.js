@@ -2,6 +2,7 @@ const express = require('express') ;
 
 // La fonction app reconnaitra toutes les informations de Express
 const app = express();
+require('./models/dbConfig');
 
 
 // Se connecter au serveur
