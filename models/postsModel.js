@@ -12,7 +12,13 @@ const PostsModel = mongoose.model(
         message: {
             type: String,
             require: true // active le champs
+        },
+        date: {
+            type: Date,
+            default: Date.now
         }
     },
     "posts"
-)
+);
+
+module.exports = { PostsModel } ;
