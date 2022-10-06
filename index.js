@@ -3,7 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // création d'un middleware pour le fonctionnement de findByIdAndUpdate
-mongoose.set('useFindAndModify', false); 
+mongoose.set('useFindAndModify', true);
+
+const cors = require('cors');
 
 // La fonction app reconnaitra toutes les informations de Express
 const app = express();
@@ -18,6 +20,7 @@ const postsRoutes = require('./routes/postsController');
 // si le chemin est '/posts', il me dirige vers postsRoutes
 app.use('/posts', postsRoutes);
 app.use(bodyParser.json());
+app.use(cors());
 
 
 // Se connecter au serveur
