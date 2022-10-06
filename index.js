@@ -20,7 +20,10 @@ const postsRoutes = require('./routes/postsController');
 // si le chemin est '/posts', il me dirige vers postsRoutes
 app.use('/posts', postsRoutes);
 app.use(bodyParser.json());
-app.use(cors());
+
+// Cors() donne l'accès de mon API à tous (mais c'est déconseillé)
+// Origin donne l'accès de mon API au site désiré (à un frontend REACT par exemple)
+app.use(cors({origin: 'http://127.0.0.1:3000'})); 
 
 
 // Se connecter au serveur
