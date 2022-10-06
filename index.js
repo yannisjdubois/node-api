@@ -1,10 +1,16 @@
 const bodyParser = require('body-parser');
-const express = require('express') ;
+const express = require('express');
+const mongoose = require('mongoose');
+
+// création d'un middleware pour le fonctionnement de findByIdAndUpdate
+mongoose.set('useFindAndModify', false); 
 
 // La fonction app reconnaitra toutes les informations de Express
 const app = express();
 require('./models/dbConfig');
 const postsRoutes = require('./routes/postsController');
+
+
 
 
 
