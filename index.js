@@ -17,8 +17,8 @@ const postsRoutes = require('./routes/postsController');
 
 
 // Création d'une fonction middleware qui va surveiller les requests et les responses
-// si le chemin est '/posts', il me dirige vers postsRoutes
-app.use('/posts', postsRoutes);
+// si le chemin est '/afficher', il me dirige vers postsRoutes
+app.use('/afficher', postsRoutes);
 app.use(bodyParser.json());
 
 // Cors() donne l'accès de mon API à tous (mais c'est déconseillé)
