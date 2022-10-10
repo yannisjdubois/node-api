@@ -1,9 +1,9 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
 // création d'un middleware pour le fonctionnement de findByIdAndUpdate
-mongoose.set('useFindAndModify', true);
+// mongoose.set('useFindAndModify', true);
 
 const cors = require('cors');
 
