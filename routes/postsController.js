@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 //  Méthode POST pour ajouter données
 router.post('/', (req, res) => {
-    console.log(req);
+    // console.log(req);
     const newRecord = new PostsModel({
         author: req.body.author,
         message: req.body.message
