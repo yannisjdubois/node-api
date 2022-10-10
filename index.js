@@ -18,12 +18,12 @@ const postsRoutes = require('./routes/postsController');
 
 // Création d'une fonction middleware qui va surveiller les requests et les responses
 // si le chemin est '/afficher', il me dirige vers postsRoutes
-app.use('/afficher', postsRoutes);
+app.use('/', postsRoutes);
 app.use(bodyParser.json());
 
 // Cors() donne l'accès de mon API à tous (mais c'est déconseillé)
 // Origin donne l'accès de mon API au site désiré (à un frontend REACT par exemple)
-app.use(cors({origin: 'http://127.0.0.1:3000'})); 
+app.use(cors({origin: 'http://127.0.0.1:5500'})); 
 
 
 // Se connecter au serveur

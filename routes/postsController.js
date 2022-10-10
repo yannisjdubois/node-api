@@ -14,8 +14,9 @@ router.get('/', (req, res) => {
 });
 
 //  Méthode POST pour ajouter données
-router.post('/', (req, res) => {
-    // console.log(req);
+router.post('/ajouter', (req, res) => {
+    console.log(req);
+    // res.send({id:"testapi"})
     const newRecord = new PostsModel({
         author: req.body.author,
         message: req.body.message
